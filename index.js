@@ -10,7 +10,7 @@ mongoose.connect("mongodb+srv://parthjohi009:E5ESleWwGGp0waa1@cluster0.k3a6ktn.m
     useNewUrlParser : true,
 }).then(()=> console.log("mongodb is connected ")).catch((err)=> console.log("promise failed",err))
 
-app.get("/",route)
+app.get("/",route) 
 
 app.listen(7000,()=>{
     console.log("port is connected")
