@@ -1,5 +1,12 @@
-const demofuntion = function (req,res){
-    res.send("hlo")
-}
+const mongoose = require("mongoose");
 
-module.exports = demofuntion
+const demoSchema = new mongoose.Schema({
+  firstName: {
+    type: mongoose.Schema.Types.String,
+  },
+  lastName: {
+    type: mongoose.Schema.Types.String,
+  },
+});
+
+module.exports = new mongoose.model("Demo", demoSchema);

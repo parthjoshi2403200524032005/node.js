@@ -6,15 +6,19 @@ const app = express();
 
 
 
-mongoose.connect("mongodb+srv://parthjohi009:E5ESleWwGGp0waa1@cluster0.k3a6ktn.mongodb.net/",{
-    useNewUrlParser : true,
-}).then(()=> console.log("mongodb is connected ")).catch((err)=> console.log("promise failed",err))
+mongoose.connect("mongodb+srv://parthjoshi7639:ParthJoshi@cluster0.pxjkjcm.mongodb.net/", {
+  useUnifiedTopology: true,
+  useNewUrlParser: true,
+})
+.then(() => console.log("MongoDB connected"))
+.catch((err) => console.error("MongoDB connection error:", err));
 
-app.get("/",route) 
+app.use("/",route) 
 
 app.listen(7000,()=>{
     console.log("port is connected")
 })
+
 
 // mongodb+srv://parthjohi009:E5ESleWwGGp0waa1@cluster0.k3a6ktn.mongodb.net/
 // password = E5ESleWwGGp0waa1 ;
