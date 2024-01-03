@@ -8,7 +8,7 @@ const createDemoData = async function (req,res){
         firstName:"parth",
         lastName:"Joshi",
     })
-    const {firstName,lastName} = req.body
+    // const {firstName,lastName} = req.body
     res.send({Message:"user created successfuly",demoData})
 }
 
