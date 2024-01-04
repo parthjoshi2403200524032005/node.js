@@ -4,15 +4,40 @@ const demoSchema = require('./demo.js')
 
 
 const createDemoData = async function (req,res){
+    const {
+        firstName,
+        lastName,
+        email,
+        password,
+        address,
+        mobileNumber,
+        age,
+        isActive,
+      } = req.body;
+  
+      // if (!email) {
+      //   return res.send({ message: "Please enter email" });
+      // }
+    
+      // if (!mobileNumber) {
+      //   return res.send({ message: "Please enter mobile number" });
+      // }
+    
+
     const demoData = await demoSchema.create({
-        firstName:"parth",
-        lastName:"joshi",
-        email:"parthjohi009@gmail.com",
-        PhoneNumber:"7889264260"
+        firstName,
+        lastName,
+        email,
+        mobileNumber,
+        address,
+        password,
+        age,
+        isActive,
+        
     })
-    // const {firstName,lastName} = req.body
-    res.send({Message:"user created successfuly",demoData})
-}
+  
+    res.send({Message:"user created successfuly",demoData,success: true,})
+} 
 
 
 module.exports = createDemoData ;

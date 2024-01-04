@@ -3,22 +3,34 @@ const mongoose = require("mongoose");
 const demoSchema = new mongoose.Schema({
   firstName: {
     type: mongoose.Schema.Types.String,
-    required: true,
+  
     uppercase: true,
   },
   lastName: {
     type: mongoose.Schema.Types.String,
-    required: true,
+    
   },
   email: {
     type: mongoose.Schema.Types.String,
-    required: true,
+   
     unique: true,
   },
-  PhoneNumber: {
+  password: {
     type: mongoose.Schema.Types.String,
-    required: true,
+  },
+  address: {
+    type: mongoose.Schema.Types.String,
+  },
+  mobileNumber: {
+    type: mongoose.Schema.Types.Number,
+  
     unique: true,
+  },
+  age: {
+    type: mongoose.Schema.Types.Number,
+  },
+  isActive: {
+    type: mongoose.Schema.Types.Boolean,
   },
 });
 
