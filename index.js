@@ -18,11 +18,6 @@ app.use("/",route)
   });
 
 
-
-
-
-
-
 app.listen(7000,()=>{
     console.log("port is connected")
 })
