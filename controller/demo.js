@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 
 const demoSchema = new mongoose.Schema({
   firstName: {
-    type: mongoose.Schema.Types.String,
+    type: mongoose.Schema.Types.String, 
   
     uppercase: true,
   },

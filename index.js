@@ -17,7 +17,7 @@ mongoose
   .catch((err) => {
     console.error("MongoDB connection error:", err);
   });
-app.use("/", route);
+app.use("/api", route);
 
 app.listen(7000, () => {
   console.log("port is connected");
