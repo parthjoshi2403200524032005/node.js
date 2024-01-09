@@ -1,5 +1,5 @@
 const demofuntion = function (req,res){
-    res.send("hlo")
+    res.send("parth")
 }
 
 module.exports = demofuntion
